@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
+    id("com.google.dagger.hilt.android")
+    id("com.google.devtools.ksp") version "2.3.9"
 }
 
 android {
@@ -54,8 +56,25 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.test.manifest)
     debugImplementation(libs.androidx.compose.ui.tooling)
 
+    // Dagger-hilt
+    implementation("com.google.dagger:hilt-android:2.60.1")
+    ksp("com.google.dagger:hilt-android-compiler:2.60.1")
+
+    // Material Icons
+    implementation("androidx.compose.material:material-icons-core:1.7.8")
+
+    // Navigation
+    implementation("androidx.navigation:navigation-compose:2.9.8")
+    implementation("androidx.hilt:hilt-lifecycle-viewmodel-compose:1.4.0")
+
     // Retrofit
     implementation("com.squareup.retrofit2:retrofit:3.0.0")
     implementation("com.squareup.retrofit2:converter-moshi:3.0.0")
     implementation("com.squareup.moshi:moshi-kotlin:1.15.0")
+
+    // OKHttp
+    implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
+
+    // DateTime
+    implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.8.0")
 }
