@@ -1,7 +1,5 @@
 package com.sean.jikananimelist.model
 
-import android.os.Build
-import androidx.annotation.RequiresApi
 import com.sean.jikananimelist.model.remote.RemoteJAnime
 import com.sean.jikananimelist.model.remote.RemoteJAnime.AnimeDemographics
 import com.sean.jikananimelist.model.remote.RemoteJAnime.AnimeGenre
@@ -14,7 +12,6 @@ import com.sean.jikananimelist.model.remote.RemoteJAnime.RemoteAnimeTime
 import kotlinx.datetime.LocalDateTime
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.toLocalDateTime
-import java.time.LocalDate
 import kotlin.time.Instant
 
 data class JAnime(
