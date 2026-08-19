@@ -77,4 +77,11 @@ dependencies {
 
     // DateTime
     implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.8.0")
+
+    // Coil
+    implementation("io.coil-kt.coil3:coil-compose:3.5.0")
+    implementation("io.coil-kt.coil3:coil-network-okhttp:3.5.0")
+
+    // Paging3
+    implementation("androidx.paging:paging-compose:3.5.1")
 }
